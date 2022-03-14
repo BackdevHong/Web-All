@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <style type="text/css">
+      #item1 {
+        width: 100px; /* 넓이 */
+        height: 100px; /* 높이 */
+        background-color: red; /* 배경색 */
+        color: white; /* 텍스트 색깔 */
+      }
+
+      #item2 {
+        width: 300px;
+        height: 50px;
+        color: blue;
+        font-size: 32px; /* 폰트 크기 */
+        font-weight: bold; /* 폰트 굵기 */
+      }
+
+      #item-list {
+        height: 200px;
+        background-color: gray;
+        padding: 16px; /* 상하좌우로 (안에)여백 추가*/
+      }
+
+      #item-list > #item3 {
+        margin-bottom: 32px; /*아래쪽에 여백 추가*/
+        /* margin-left: 16px; 왼쪽에 여백 추가 */
+        /* margin: 32px; 상하좌우로 여백추가 */
+        background-color: yellow;
+        border: 5px dashed blue; /* 테두리 선 추가 ( 점선 ) */
+      }
+
+      #item-list > #item4 {
+        margin-left: 16px;
+        background-color: green;
+        border: 5px solid blue; /* 테두리 선 추가 ( 일반 선 ) */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="item1">1번 아이템</div>
+    <div id="item2">2번 아이템</div>
+    <div id="item-list">
+      <div id="item3">3번 아이템</div>
+      <div id="item4">4번 아이템</div>
+    </div>
+  </body>
+</html>
