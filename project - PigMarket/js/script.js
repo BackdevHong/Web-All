@@ -44,8 +44,6 @@ products.forEach((element) => {
         </div>
     </div>
   </div>
-  <Sex>
-  </Sex>
 `;
 });
 
