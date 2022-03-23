@@ -1,0 +1,24 @@
+dt {
+    font-weight: bold;
+}
+table, th, td { 
+    border: 1px solid black;
+    text-align: center;
+}
+
+.noactive{
+    color: lightgrey;
+}
+
+a{
+    color: black;
+}
+
+.wrap{
+    width: 500px;
+}
+
+.첫{
+    width: 900px;
+    height: 20px;
+}
