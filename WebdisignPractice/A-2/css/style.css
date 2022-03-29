@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    color: #333333;
+    background-color: #ffffff;
+    list-style: none;
+}
+
+a{
+    color: inherit;
+}
+
+/* 전체 넓이, 높이 설정 */
+.container{
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+/* 헤더 설정 */
+
+header{
+    height: 100px;
+    background-color: aqua;
+}
+
+.header-logo{
+    float: left;
+    margin-top: 25px;
+}
+.slide{
+    height: 300px;
+    background-color: azure;
+}
+
+.contents{
+    height: 200px;
+    background-color: black;
+}
+
+footer{
+    height: 100px;
+    background-color: yellow;
+}
