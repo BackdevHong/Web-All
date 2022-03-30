@@ -7,11 +7,14 @@
         <link rel="stylesheet" href="./css/style.css" />
         <script src="./js/jquery-3.6.0.js"></script>
         <script src="./js/menu.js"></script>
+        <script src="./js/slide.js"></script>
+        <script src="./js/click.js"></script>
         <title>Green복지재단</title>
     </head>
     <body>
         <!-- 전체적인 틀 -->
-        <div class="container">
+        <div id="mask"></div>
+        <div class="container" id="background">
             <!-- 헤더 -->
             <header>
                 <!-- 로고 -->
@@ -59,15 +62,69 @@
                 </div>
             </header>
             <!-- 슬라이드 -->
-            <section class="slide"></section>
+            <section class="slide">
+                <div>
+                    <h3>이미지1</h3>
+                    <a href="#"><img src="./img/image1.jpg" alt="" srcset=""></a>
+                </div>
+                <div>
+                    <h3>이미지2</h3>
+                    <a href="#"><img src="./img/image2.jpg" alt="" srcset=""></a>
+                </div>
+                <div>
+                    <h3>이미지3</h3>
+                    <a href=""><img src="./img/image3.png" alt="" srcset=""></a>
+                </div>
+            </section>
             <!-- 컨텐츠 -->
             <section class="contents">
                 <!-- 공지사항 -->
-                <article class="announce"></article>
+                <article class="announce">
+                    <div class="ann">
+                        공지사항
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                안녕하세요 테스트 공지사항입니다!
+                            </a>
+                            <p>2022-03-30</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                안녕하세요 2테스트 공지사항입니다!
+                            </a>
+                            <p>2022-03-30</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                안녕하세요 3테스트 공지사항입니다!
+                            </a>
+                            <p>2022-03-30</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                안녕하세요 4테스트 공지사항입니다!
+                            </a>
+                            <p>2022-03-30</p>
+                        </li>
+                    </ul>
+                </article>
                 <!-- 갤러리 -->
-                <article class="gal"></article>
+                <article class="gal">
+                    <div class="ann">
+                        갤러리
+                    </div>
+                    <article class="Gal">
+                        <a><img src="./img/img1.jpeg" alt=""></a>
+                        <a><img src="./img/img2.jpeg" alt=""></a>
+                        <a><img src="./img/img3.jpeg" alt=""></a>
+                    </article>
+                </article>
                 <!-- 배너 -->
-                <article class="banner"></article>
+                <article class="banner">
+                    <h3>배너</h3>
+                </article>
             </section>
             <!-- 푸터 -->
             <footer>
@@ -78,6 +135,16 @@
                 <!-- 패밀리사이트 -->
                 <article class="family"></article>
             </footer>
+        </div>
+        <div class="model">
+            <h3>
+                팝업창
+            </h3>
+            <hr>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, mollitia quis quaerat delectus ducimus labore, dignissimos enim quisquam quo natus voluptatum quas consectetur earum illum sapiente possimus ullam placeat vero?
+            </p>
+            <button>닫기</button>
         </div>
     </body>
 </html>

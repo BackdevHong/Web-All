@@ -30,13 +30,13 @@ header {
 
 .top {
     width: 100%;
-    height: 150px;
+    height: 100px;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 1;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 999;
 }
 
-.header-logo {
+.header-logo {  
     float: left;
     margin-top: 25px;
 }
@@ -52,12 +52,10 @@ header {
 
 .menu > ul > li {
     float: left;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .menu > ul > li > a {
-    z-index: 1;
-    font-family: cursive;
     display: block;
     position: relative;
     width: 180px;
@@ -83,23 +81,211 @@ header {
 .submenu > li > a {
     display: block;
     width: 180px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /* 슬라이드 설정 */
 
 .slide {
+    width: 1200px;
     height: 300px;
-    background-color: azure;
+    position: relative;
+}
+
+.slide div > h3{
+    z-index: 2;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+.slide > div{
+    display: block;
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    transform: translateX(-200px);
+}
+
+.slide > div a {
+    display: block;
+    height: 300px;
+}
+
+.slide > div.active{
+    transform: translateX(0);
+    opacity: 1;
 }
 
 /* 칸텐츠 설정 */
 
 .contents {
     height: 200px;
+}
+
+/* 공지사항 설정 */
+
+.announce{
+    width: 398px;
+    height: 200px;
+    float: left;
+}
+
+.announce > div.ann2{
+    background-color: rgb(24, 255, 74);
+    display: block;
+    left: 240px;
+    font-size: 20px;
+    width: 80px;
+    transition: 0.4s;
+}
+
+.announce > div.ann{
+    background-color: rgb(96, 247, 129);
+    display: block;
+    left: 240px;
+    font-size: 20px;
+    width: 80px;
+    transition: 0.4s;
+}
+
+.announce> ul{
+    display: block;
+    position: absolute;
+    height: 174px;
+    width: 398px;
+    background-color: rgb(96, 247, 129);
+}
+
+.announce > ul > li{
+    font-size: 15px;
+    text-align: left;
+}
+
+.announce > ul > li > p{
+    float: right;
+    padding-top: 18px;
+    padding-right: 2px;
+    display: block;
+    background-color: rgb(96, 247, 129);
+}
+
+.announce > ul > li > a{
+    background-color: rgb(96, 247, 129);
+    padding-top: 18px;
+    display: inline-block;
+    width: 317.6px;
+}
+
+.announce > ul > li > a:hover{
+    cursor: pointer;
+    color: lightcoral;
+    font-weight: bold;
+}
+
+/* 갤러리부분 설정 */
+
+.gal{
+    width: 400px;
+    height: 200px;
+    float: left;
+    background-color: #ffffff;
+}
+
+.gal > div.ann{
+    background-color: rgb(96, 247, 129);
+    display: block;
+    text-align: center;
+    left: 240px;
+    font-size: 20px;
+    width: 80px;
+    transition: 0.4s;
+}
+
+.gal > div.ann2{
+    background-color: rgb(24, 255, 74);
+    display: block;
+    text-align: center;
+    left: 240px;
+    font-size: 20px;
+    width: 80px;
+    transition: 0.4s;
+}
+
+.gal > article.Gal{
+    display: block;
+    position: absolute;
+    height: 174px;
+    width: 400px;
+    background-color: rgb(96, 247, 129);
+}
+
+.gal > .Gal > a > img{
+    flex-direction: row;
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+.banner{
+    width: 400px;
+    height: 200px;
+    float: left;
     background-color: black;
 }
 
+.banner > h3{
+    color: white;
+    position: relative;
+    text-align: center ;
+    margin-top: 90px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* 팝업창 설정 */
+
+.model {
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    top: -500px;
+    display: none;
+    z-index: 1001;
+}
+
+.model > h3{
+    text-align: center;
+    padding: 7px;
+}
+
+.model p{
+    padding: 10px;
+    text-align: center;
+}
+
+.model > button{
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 220px;
+    border: none;
+    width: 60px;
+    border: 1px solid gray;
+}
+#active{
+    display: block;
+}
+
+#mask {  
+    position:absolute;  
+    left:0;
+    top:0;
+    z-index:1000;  
+    background-color:#000;  
+    display: none;  
+}
 /* 푸터 설정 */
 
 footer {

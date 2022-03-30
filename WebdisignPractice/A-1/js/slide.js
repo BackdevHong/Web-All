@@ -4,7 +4,7 @@ $(document).ready(function(){
     
     setInterval(function(){
         if ( i < 2 ){
-            i++
+            i += 1
         } else {
             i = 0;
         }
