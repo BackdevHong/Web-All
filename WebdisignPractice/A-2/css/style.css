@@ -279,7 +279,7 @@ header {
 }
 
 #mask {  
-    position:absolute;  
+    position:absolute;
     left:0;
     top:0;
     z-index:1000;  
@@ -290,5 +290,34 @@ header {
 
 footer {
     height: 100px;
-    background-color: yellow;
+}
+
+.footer-logo{
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+
+.img{
+    width: 200px;
+    height: 100px;
+}
+
+.footer-logo > img{
+    width: 200px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.copyright{
+    width: 800px;
+    height: 100px;
+    float: left;
+    text-align: center;
+    font-size: 50px;
+}
+
+.family{
+    font-size: 40px;
+    text-align: center;
 }
