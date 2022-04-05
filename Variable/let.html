@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 상수와 다른 변수 선언
+            let pi = 3.141592;
+            console.log(pi);
+
+            let r = 10;
+
+            console.log(2 * pi * r); // 원의 둘레 구하기
+            console.log(pi * r * r); // 원의 넓이 구하기
+
+            // 중력 가속도와 질량을 기반으로 한 힘 구하기
+            let g = 9.8;
+            let m = 10;
+            console.log(m * g);
+
+            g = 9.80665; // 변수 값 변경
+            console.log(m * g);
+
+            // 복합 대입 연산자
+            let a = 10;
+            console.log((a += 1)); // 더하기
+            console.log((a -= 1)); // 빼기
+            console.log((a *= 10)); // 곱
+            console.log((a /= 2)); // 나누기
+            console.log((a %= 2)); // 나머지
+
+            // 응용
+            let list = "";
+
+            list += "<ul>";
+            list += "   <li>Hello</li>";
+            list += "   <li>JavaScript..</li>";
+            list += "</ul>";
+
+            document.write(list);
+
+            // 증감 연산자
+            let i = 0;
+            console.log(++i); // i += 1
+            console.log(--i); // i -= 1
+            console.log(i++); // 후위 증감 ( i를 한번 출력하고 +를 시킨다. )
+            console.log(i);
+            console.log(i--); // 위와 동일, i를 -1 시킨다.
+            console.log(i);
+        </script>
+    </body>
+</html>
