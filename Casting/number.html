@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            Number("123"); // 문자열 -> 숫자열
+            alert(typeof Number("123"));
+
+            alert(Number("$123")); // 다른 문자가 들어가있어서 숫자형으로 표현이 안됨. 그래서 NaN이 뜸.
+            alert(typeof Number("$123")); // 형은 숫자형으로 뜨긴 한다.
+
+            // 불 변환
+            alert(Number(true));
+            alert(Number(false));
+
+            // 함수를 사용하지 않고 형변환하기
+            alert("52" - 0);
+            alert(typeof ("52" - 0));
+            alert(true - 0);
+            alert(typeof (true - 0));
+
+            // +a
+            alert(1 + true);
+            alert(1 + false);
+        </script>
+    </body>
+</html>
