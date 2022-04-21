@@ -9,10 +9,10 @@
     $sex = $_POST['sex'];
     $email = $_POST['email'].'@'.$_POST['email_address'];
 
-    $sql = mq("insert into member (id,pw,name,address,sex,email) values('".$userId."','".$userPw."','".$userName."','".$address."','".$sex."','".$email."',)");
+    $sql = mq("insert into member (id,pw,name,address,sex,email) values('".$userId."','".$userPw."','".$userName."','".$address."','".$sex."','".$email."')");
 ?>
-<meta charset="UTF-8">
-<script>
-alert('회원가입이 완료되었습니다.')
+<meta charset="utf-8" />
+<script type="text/javascript">
+alert('회원가입이 완료되었습니다.');
 history.go(-2);
 </script>

@@ -8,8 +8,8 @@
 
 ?>
 
-<meta charset="UTF-8">
-<script>
-alert('회원탈퇴가 완료되었습니다.')
+<meta charset="utf-8" />
+<script type="text/javascript">
+alert('회원탈퇴가 완료되었습니다.');
 history.go(-2);
 </script>

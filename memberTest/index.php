@@ -12,7 +12,7 @@
 <body>
     <div id="login_box">
         <h1>로그인</h1>
-        <form action="post" action="./member/login_ok.php">
+        <form method="post" action="./member/login_ok.php">
             <table align="center" border="0" cellspacing="0" width="300">
                 <tr>
                     <td width="130" colspan="1">
