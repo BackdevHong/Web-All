@@ -17,5 +17,11 @@ Student.prototype.study = function study() {
 };
 
 const me = new Student("Pig_mon");
-console.log(me.greet());
-console.log(me.study());
+// console.log(me.greet());
+// console.log(me.study());
+console.log(me instanceof Student);
+console.log(me instanceof Person);
+
+const anotherPerson = new Person("foo");
+console.log(anotherPerson instanceof Student);
+console.log(anotherPerson instanceof Person);
