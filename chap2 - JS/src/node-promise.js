@@ -24,4 +24,3 @@ fs.promises.readFile('Closure.js', 'utf-8')
 
 
 readFileInPromise('Closure.js').then((value) => console.log(value)).catch(() => { console.log("파일이 존재하지 않습니다.") });
-
