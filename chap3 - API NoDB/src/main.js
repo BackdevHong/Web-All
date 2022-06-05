@@ -50,6 +50,22 @@ const server = http.createServer((req, res) => {
             res.end('Post Not Found')
         }
     } else if (req.url === "/posts" && req.method === 'POST') {
+        req.setEncoding('utf-8')
+        req.on('data', data => {
+            /** 
+             * @typedef CreatePostBody 
+             * @property {string} title
+             * @property {string} content
+             * */
+            /** @type {CreatePostBody} */
+            const body = JSON.parse(data)
+            console.log(body);
+            posts.push({
+                id: body.title.toLowerCase().replace(' ', '_'),
+                title: body.title,
+                content: body.content
+            })
+        })
         res.statusCode = 200
         res.end('creating Post')
     } else {
