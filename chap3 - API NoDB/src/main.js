@@ -15,14 +15,36 @@ const server = http.createServer((req, res) => {
                 route.method === req.method
         );
 
-        if (!route) {
+        if (!req.url || !route) {
             res.statusCode = 404;
             res.end("error, not found");
             return;
         }
 
-        const result = await route.callback();
+        const regexResult = route.url.exec(req.url)
+
+        if (!regexResult) {
+            res.statusCode = 404;
+            res.end("error, not found");
+            return;
+        }
+
+        /** @type {Object.<string, *> | undefined} */
+        const reqBody = req.headers['content-type'] === 'application/json' && await new Promise((resolve, reject) => {
+            req.setEncoding('utf-8')
+            req.on('data', data => {
+                try {
+                    resolve(JSON.parse(data))
+                } catch {
+                    reject(new Error('Error'))
+                }
+            })
+        }) || undefined
+
+
+        const result = await route.callback(regexResult, reqBody);
         res.statusCode = result.statusCode;
+
         if (typeof result.body === "string") {
             res.end(result.body);
         } else {
