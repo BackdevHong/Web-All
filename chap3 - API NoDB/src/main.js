@@ -61,7 +61,7 @@ const server = http.createServer((req, res) => {
             const body = JSON.parse(data)
             console.log(body);
             posts.push({
-                id: body.title.toLowerCase().replace(' ', '_'),
+                id: body.title.toLowerCase().replace(/\s/g, '_'),
                 title: body.title,
                 content: body.content
             })
