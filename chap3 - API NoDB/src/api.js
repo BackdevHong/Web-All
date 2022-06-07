@@ -34,6 +34,14 @@ const posts = [
  * @property {(matches: string[], body: Object<string, *> | undefined) => Promise<APIResponse>} callback
  */
 
+const fs = require("fs");
+
+/**@returns {Promise<Post[]>} */
+async function getPosts() {
+    const json = await fs.promises.readFile('database.json', 'utf-8');
+    return JSON.parse()
+}
+
 /** @type {Route[]} */
 const routes = [
     {
