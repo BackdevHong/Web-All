@@ -48,28 +48,28 @@ const routes = [
         url: /^\/posts\/([a-zA-z0-9-_]+)$/,
         method: "GET",
         callback: async (matches) => {
-            const postId = matches[1]
+            const postId = matches[1];
             if (!postId) {
                 return {
                     statusCode: 404,
-                    body: 'Not Found',
-                }
+                    body: "Not Found",
+                };
             }
 
-            const post = posts.find(_post => _post.id === postId)
+            const post = posts.find((_post) => _post.id === postId);
 
             if (!post) {
                 return {
                     statusCode: 404,
-                    body: 'Not Found',
-                }
+                    body: "Not Found",
+                };
             }
 
             return {
                 statusCode: 200,
                 body: post,
-            }
-        }
+            };
+        },
     },
     {
         url: /^\/posts$/,
@@ -78,23 +78,24 @@ const routes = [
             if (!body) {
                 return {
                     statusCode: 400,
-                    body: 'Ill-format request',
-                }
+                    body: "Ill-format request",
+                };
             }
             /** @type {string} */
-            const title = body.title
+            // eslint-disable-next-line prefer-destructuring
+            const title = body.title;
             const newPost = {
-                id: title.replace(/\s/g, '_'),
+                id: title.replace(/\s/g, "_"),
                 title,
-                content: body.content
-            }
+                content: body.content,
+            };
 
-            posts.push(newPost)
+            posts.push(newPost);
             return {
                 statusCode: 200,
                 body: newPost,
-            }
-        }
+            };
+        },
     },
 ];
 

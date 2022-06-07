@@ -1,6 +1,9 @@
 {
     "scripts": {
-        "server" : "nodemon src/main.js"
+        "server": "nodemon src/main.js"
+    },
+    "engines": {
+        "node" : "18.3.0"
     },
     "devDependencies": {
         "@types/node": "^17.0.36",
