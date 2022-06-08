@@ -1,8 +1,8 @@
 $(document).ready(function () {
-	$(".mainMenu > li").mouseenter(function () {
+	$(".mainMenu > ul > li").mouseenter(function () {
 		$(".subMenu").stop().slideDown();
 	});
-	$(".mainMenu > li").mouseleave(function () {
+	$(".mainMenu > ul > li").mouseleave(function () {
 		$(".subMenu").stop().slideUp();
 	});
 });
