@@ -1,0 +1,45 @@
+.main-bg {
+    padding: 100px 20px;
+    background: lightgray;
+}
+
+.dark-bg-content{
+    padding: 100px 20px;
+    background-color: rgb(31, 30, 30);
+    color: white;
+}
+
+.dark-bg{
+    background-color: black;
+}
+
+.list-group {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.black-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding: 30px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show-modal {
+    visibility: visible;
+    opacity: 1;
+}
+
+.white-bg {
+    background: white;
+    border-radius: 5px;
+    padding: 30px;
+}
