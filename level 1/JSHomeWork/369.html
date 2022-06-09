@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function 삼육구게임(value) {
+            if (value % 9 === 0) {
+                console.log("박수 짝짝!");
+            } else if (value % 3 === 0) {
+                console.log("박수 짝!");
+            } else {
+                console.log(value);
+            }
+        }
+
+        function 합격했냐(value, value2){
+            if(value < 0 || value2 < 0 || value > 100 || value2 > 100){
+                console.log("지랄말고.. 제대로 적으라잉..")
+            } else if(value <= 40 || value2 <= 40){
+                console.log("과락이 사람이냐? ㅋㅋ")
+            } else if ((value + value2) < 120){
+                console.log("어이구.. 총점을 못넘겼네.. 아쉽다!")
+            } else if ((value + value2) >= 120){
+                console.log("합격했누.. 대단하누..")
+            }
+        }
+
+        function 응용삼육구게임(value) {
+            value2 = value % 10
+            if (value2 === 3 || value2 === 6 || value2 === 9) {
+                console.log("박수 짝!");
+            } else {
+                console.log(value);
+            }
+        }
+    </script>
+</body>
+</html>
