@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="alert.css">
+</head>
+<body>
+    <div id="alert-box">
+        <p id="textOfAlert"></p>
+        <button onclick="alertSet('Close')">닫기</button>
+    </div>
+    <button onclick="alertSet('Open', 'id')">열기</button>
+    <button onclick="alertSet('Open', 'password')">열기2</button>
+</body>
+<script>
+    function alertSet(str, types){
+        if(str === "Close"){
+            document.getElementById("alert-box").style.display = 'none';
+        } else {
+            document.getElementById("alert-box").style.display = 'block';
+            if(types === "id"){
+                document.getElementById("textOfAlert").innerHTML = '아이디 입력하세요.';
+            } else if (types === "password"){
+                document.getElementById("textOfAlert").innerHTML = '비밀번호 입력하세요.';
+            }
+        }
+    }    
+
+</script>
+</html>
