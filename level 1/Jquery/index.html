@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
+    </head>
+
+<body>
+    <!-- <button type="button" class="btn btn-primary">Primary</button>  -->
+
+    <div class="black-bg">
+        <div class="white-bg">
+            <h4>로그인하세요</h4>
+            <button class="btn btn-danger" id="close">닫기</button>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">Navbar</span>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+
+    <button id="login-btn">버튼</button>
+
+    <script>
+
+        $('.navbar-toggler').on('click', () => {
+            $('.list-group').toggleClass('show').slideToggle();
+        })
+
+        $('#login-btn').on('click', () => {
+            $('.black-bg').addClass('show-modal')
+        })
+
+        $('#close').on('click', () => {
+            $('.black-bg').removeClass('show-modal')
+        })
+        /* $('.hello').html('바보')
+        $('.hello').css('color', 'red')
+        $('.hello').addClass('show') // 추가
+        $('.hello').removeClass('show') // 제거
+        $('.hello').toggleClass('show') // 토글 */
+
+        /*$('.hello').html('바보') // 다 바꿔줌
+        $('#test-btn').on('click', () => {
+            /*$('.hello').fadeOut();
+            $('.hello').slideUp();
+        })*/
+
+    </script>
+</body>
+
+</html>
