@@ -10,12 +10,17 @@
 <body>
     <div id="alert-box">
         <p id="textOfAlert"></p>
-        <button onclick="alertSet('Close')">닫기</button>
+        <button id="closeAlert">닫기</button>
     </div>
     <button onclick="alertSet('Open', 'id')">열기</button>
     <button onclick="alertSet('Open', 'password')">열기2</button>
 </body>
 <script>
+
+    document.getElementById('closeAlert').addEventListener("click", () => {
+        document.getElementById("alert-box").style.display = 'none';
+    })
+
     function alertSet(str, types){
         if(str === "Close"){
             document.getElementById("alert-box").style.display = 'none';
@@ -27,7 +32,7 @@
                 document.getElementById("textOfAlert").innerHTML = '비밀번호 입력하세요.';
             }
         }
-    }    
+    }   
 
 </script>
 </html>
