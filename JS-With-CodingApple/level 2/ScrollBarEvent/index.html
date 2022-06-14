@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./main.css" />
+	</head>
+	<body>
+		<!-- 모달창 -->
+		<div class="black-bg">
+			<div class="white-bg">
+				<h4>로그인하세요</h4>
+				<form action="success.html" id="my-form">
+					<div class="my-3">
+						<input type="text" class="form-control" id="email" />
+					</div>
+					<div class="my-3">
+						<input
+							type="password"
+							id="password"
+							class="form-control"
+						/>
+					</div>
+					<button type="submit" id="send" class="btn btn-primary">
+						전송
+					</button>
+					<button type="button" class="btn btn-danger" id="close">
+						닫기
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- 네비게이션 -->
+		<nav class="navbar navbar-light bg-light">
+			<div class="container-fluid">
+				<span class="navbar-brand">JSShop</span>
+				<button class="navbar-toggler" type="button">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+			<div class="black-line"></div>
+		</nav>
+		<ul class="list-group">
+			<li class="list-group-item">An item</li>
+			<li class="list-group-item">A second item</li>
+			<li class="list-group-item">A third item</li>
+			<li class="list-group-item">A fourth item</li>
+			<li class="list-group-item">And a fifth one</li>
+		</ul>
+		<div class="main-bg">
+			<h4>셔츠가 세일한다고??</h4>
+			<button id="login-btn" class="btn btn-danger">로그인</button>
+		</div>
+
+		<div
+			class="lorem"
+			style="width: 200px; height: 100px; overflow-y: scroll"
+		>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+			labore qui, animi beatae perferendis laboriosam repellat totam
+			eligendi pariatur sunt excepturi voluptatem voluptas aut odio
+			praesentium consequuntur vero neque unde.
+		</div>
+
+		<div style="height: 1000px"></div>
+
+		<script>
+			$(".navbar-toggler").on("click", () => {
+				$(".list-group").toggleClass("show");
+			});
+
+			$("#login-btn").on("click", () => {
+				$(".black-bg").addClass("show-modal");
+			});
+
+			$("#close").on("click", () => {
+				$(".black-bg").removeClass("show-modal");
+			});
+
+			$("form").on("submit", (e) => {
+				const checkEmail = document.getElementById("email").value;
+				const checkPassword = document.getElementById("password").value;
+
+				if (checkEmail === "" || checkPassword === "") {
+					e.preventDefault();
+					alert("이메일 혹은 비밀번호를 입력하지 않았습니다.");
+				} else if (checkPassword.length < 6) {
+					e.preventDefault();
+					alert(
+						"비밀번호가 6자 이하입니다. 6자 이상으로 다시 해오십셔",
+					);
+				} else if (/\S+@\S+\.\S+/.test(checkEmail) === false) {
+					e.preventDefault();
+					alert("이메일 형식이 잘못 되었습니다. 다시 시도해주십셔");
+				}
+
+				if (/[A-Z]/.test(checkPassword) === true) {
+					alert("대문자가 포함되어있습니다!");
+				} else {
+					alert("대문자가 포함되어있지 않습니다!");
+				}
+			});
+
+			/*window.addEventListener("scroll", () => {
+				window.scrollBy(0, 100);
+			});*/
+
+			$(window).on("scroll", () => {
+				if ($(window).scrollTop() >= 100) {
+					$(".navbar-brand").css("font-size", 20);
+				} else {
+					$(".navbar-brand").css("font-size", 30);
+				}
+			});
+
+			$(".lorem").on("scroll", () => {
+				// console.log($(".lorem").scrollTop());
+				스크롤양 = document.querySelector(".lorem").scrollTop;
+				실제높이 = document.querySelector(".lorem").scrollHeight;
+				높이 = document.querySelector(".lorem").clientHeight;
+				결과 = 스크롤양 + 높이;
+				if (결과 === 실제높이) {
+					alert("동의하시겠습니까?");
+				}
+			});
+
+			$(window).on("scroll", () => {
+				first =
+					($(window).scrollTop() /
+						document.querySelector("body").clientHeight) *
+					220;
+				$(".black-line").css("width", `${first}%`);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer">
+    <button id="send-answer">제출</button>
+    <script>
+        // 변수 생성
+        var 나이 = 19;
+        var 출신지역 = "인천";
+
+        // 왜 이 변수는 동작하지 않을까?
+        var name = 'park';
+        var id = 0;
+
+        function showName(){
+            var name = 'kim';
+            var id = 1;
+            console.log(name); // kim이 나올것이다.
+        }
+
+        showName();
+        console.log(id); // 0이 나올것이다.
+
+        // 이자율 계산기
+        var 예금액 = 10000;
+        var 미래예금액 = 0;
+        if (예금액 <= 50000){
+            미래예금액 = 예금액 * 1.15 * 1.15
+        } else {
+            미래예금액 = 예금액 * 1.20 * 1.20
+        }
+        console.log(미래예금액)
+
+        // 커피를 먹어봅시다
+        var first = 360;
+        var result = first + first * 2 / 3 + first * 2 / 3 * 2 / 3
+        console.log(result)
+
+        // 퀴즈 ui
+        var count = 0;
+        document.querySelector('#send-answer').addEventListener('click', () => {
+            if(document.querySelector('#answer').value != 1335){
+                alert("오답입니다!!")
+                count++
+            } else {
+                alert("정답입니다!!")
+                count = 0;
+            }
+
+            if(count >= 3){
+                alert("멍청한 자식.. 이것도 못풀다니..")
+            }
+        })
+            // 이자율 계산기 10년 버전
+            var 예금액 = 10000;
+            var 미래예금액 = 0;
+            if (예금액 <= 50000) {
+                미래예금액 = 예금액 * 1.15 ** 10
+            } else {
+                미래예금액 = 예금액 * 1.20 ** 10
+            }
+            console.log(미래예금액)
+    </script>
+</body>
+</html>
