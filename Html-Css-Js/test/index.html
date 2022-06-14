@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <ul>
+        <li class="main1">메뉴
+            <ul>
+                <li class="sub1">서브1</li>
+                <li class="sub1">서브1</li>
+                <li class="sub1">서브1</li>
+                <li class="sub1">서브1</li>
+            </ul>
+        </li>
+        
+    </ul>
+</body>
+<script>
+    var main1 = 0;
+    $(document).ready(function(){
+        $(".menu1").off().on('click',function(){
+            if (main1 == 0){
+                $(".sub1").css({"display":"block"})
+                main1 = 1;
+            } else {
+                $(".sub1").css({"display":"none"})
+                main1 = 0;               
+            }
+        })
+    })
+
+</script>
+</html>
