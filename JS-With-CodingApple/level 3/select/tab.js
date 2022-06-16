@@ -31,11 +31,14 @@
 // $(".car-price").html(
 //     car2.price[0]
 // )
-// const value = $(".form-select").eq(0).val();
-// if (value === "셔츠") {
-//     $('.form-select').eq(1).removeClass('form-hide')
-//     $('.form-select').eq(0).addClass('form-hide')
-// } else if (value === "모자") {
-//     $('.form-select').eq(0).removeClass('form-hide')
-//     $('.form-select').eq(1).addClass('form-hide')
-// }
+
+const code2 = $('.form-select').eq(0)
+const code = $('.form-select').eq(1)
+code2.on('input', (e) => {
+    const value = e.currentTarget.value;
+    if (value === "셔츠") {
+        code.removeClass('form-hide')
+    } else {
+        code.addClass('form-hide')
+    }
+})
