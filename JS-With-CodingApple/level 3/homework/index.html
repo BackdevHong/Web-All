@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var 출석부 = ['흥민', '영희', '철수', '재석'];
+        
+        function 이름찾기(name){
+            var current = 0;
+            출석부.forEach((count) => {
+                if (count == name){
+                    current = 1;
+                }
+            })
+            if (current == 1){
+                console.log("있어요")
+            }
+        }
+        이름찾기('glgl')
+
+        for (var i = 2; i < 10; i++){
+            for(var j = 1; j < 10; j++){
+                console.log(i * j)
+            }
+        }
+
+        function 평균점수(array, Real){
+            var result = 0;
+            array.forEach((i) => {
+                result = result + i
+            })
+            result = result / array.length
+            if (result > Real){
+                var s = result - Real
+                console.log(`평균 점수보다 ${s}점 떨어지셨네요. 재수 추천`)
+            } else {
+                var s = Real - result
+                console.log(`평균 점수보다 ${s}점 오르셨네요?`)
+            }
+        }
+    </script>
+</body>
+</html>
