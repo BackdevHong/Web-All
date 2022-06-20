@@ -47,6 +47,7 @@
                     <img src="https://via.placeholder.com/600" class="w-100" />
                     <h5>${data.title}</h5>
                     <p>가격 : ${data.price}</p>
+                    <button class="buy">구매</button>
                 </div>`;
 			};
 
@@ -67,6 +68,19 @@
 			products.forEach((data) => {
 				$(".row").append(template(data));
 			});
+
+			var arr = [1, 2, 3];
+			var newArr = JSON.stringify(arr);
+			localStorage.setItem("num", newArr);
+			var 꺼낸거 = localStorage.getItem("num");
+			console.log(JSON.parse(꺼낸거)[0]);
+			/*$.get("https://codingapple1.github.io/js/more1.json")
+				.done((data) => {
+					console.log(data);
+				})
+				.fail(() => {
+					console.log("히히 안됬다 히히");
+				});*/
 
 			var count = 0;
 			$("#more").click(() => {
