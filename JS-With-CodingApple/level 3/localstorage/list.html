@@ -44,10 +44,10 @@
 			const template = (data) => {
 				return `
                 <div class="col-sm-4">
-                    <img src="https://via.placeholder.com/600" class="w-100" />
-                    <h5>${data.title}</h5>
-                    <p>가격 : ${data.price}</p>
-                    <button class="buy">구매</button>
+                        <img src="https://via.placeholder.com/600" class="w-100" />
+                        <h5>${data.title}</h5>
+                        <p>가격 : ${data.price}</p>
+                        <button class="buy">구매</button>
                 </div>`;
 			};
 
@@ -69,11 +69,11 @@
 				$(".row").append(template(data));
 			});
 
-			var arr = [1, 2, 3];
-			var newArr = JSON.stringify(arr);
-			localStorage.setItem("num", newArr);
-			var 꺼낸거 = localStorage.getItem("num");
-			console.log(JSON.parse(꺼낸거)[0]);
+			//var arr = [1, 2, 3];
+			//var newArr = JSON.stringify(arr);
+			//localStorage.setItem("num", newArr);
+			//var 꺼낸거 = localStorage.getItem("num");
+			//console.log(JSON.parse(꺼낸거)[0]);
 			/*$.get("https://codingapple1.github.io/js/more1.json")
 				.done((data) => {
 					console.log(data);
@@ -141,6 +141,17 @@
 				newData.forEach((data) => {
 					$(".row").append(template(data));
 				});
+			});
+
+			$(".buy").click((e) => {
+				var title = $(e.target).siblings("h5").text();
+				if (localStorage.getItem("cart") != null) {
+					var out = JSON.parse(localStorage.cart);
+					out.push(title);
+					localStorage.setItem("cart", JSON.stringify(out));
+				} else {
+					localStorage.setItem("cart", JSON.stringify([title]));
+				}
 			});
 		</script>
 	</body>
