@@ -1,0 +1,52 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+header {
+	background-color: black;
+	width: 100%;
+	height: 90px;
+	display: block;
+	float: left;
+}
+
+header > p {
+	color: white;
+	line-height: 90px;
+	margin-left: 20px;
+	font-size: 30px;
+	float: left;
+}
+
+.main_menu {
+	margin: 0;
+	line-height: 90px;
+}
+
+.main_menu > li > a {
+	text-decoration: none;
+	color: gray;
+}
+
+.main_menu > li {
+	float: left;
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+.content {
+	float: left;
+	margin-top: 20px;
+	margin-left: 30px;
+	width: 100%;
+}
+
+.card {
+	float: left;
+	margin-top: 20px;
+	margin-left: 30px;
+}
