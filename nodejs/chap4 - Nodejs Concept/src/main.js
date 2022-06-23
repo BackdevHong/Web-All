@@ -2,7 +2,7 @@
 
 // require
 
-console.log(require('./animals'))
+// console.log(require('./animals'))
 
 // module
 
@@ -17,3 +17,17 @@ console.log({
 // CommonJS : require
 // ECMAScript : export, import
 
+// const animalsA = require('./animals')
+// const animalsB = require('./animals')
+// const animalsC = require('./animals')
+
+// console.log(animalsA, animalsB, animalsC)
+// console.log(animalsA == animalsB)
+// console.log(animalsB == animalsC)
+
+// 예외상황
+const http = require('http')
+console.log(http)
+
+const animals = require('animals')
+console.log(animals)
