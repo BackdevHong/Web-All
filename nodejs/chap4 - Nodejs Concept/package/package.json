@@ -2,5 +2,8 @@
     "type": "module",
     "dependencies": {
         "decamelize": "^6.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.18.0"
     }
 }
