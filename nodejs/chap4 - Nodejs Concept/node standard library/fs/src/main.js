@@ -1,7 +1,11 @@
 // @ts-check
 
-const { log } = console;
+const fs = require("fs");
 
-log(require("./module"));
-log(require("./module"));
-log(require("./module"));
+fs.readFile("src/main.js", (err, result) => {
+    if (err) {
+        console.error(err);
+    } else {
+        console.log(result);
+    }
+});
