@@ -2,7 +2,7 @@
     "scripts": {
         "lint": "eslint src/**/*"
     },
-    "type": "module",
+    "type": "commonjs",
     "dependencies": {
         "decamelize": "^6.0.0"
     },
