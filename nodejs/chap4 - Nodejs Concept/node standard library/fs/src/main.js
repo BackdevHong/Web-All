@@ -2,10 +2,12 @@
 
 const fs = require("fs");
 
-fs.readFile("src/main.js", (err, result) => {
+fs.readFile("main.js", "utf-8", (err, result) => {
     if (err) {
         console.error(err);
     } else {
         console.log(result);
     }
 });
+
+// console.log("heh");
