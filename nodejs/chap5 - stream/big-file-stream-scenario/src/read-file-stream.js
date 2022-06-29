@@ -6,6 +6,7 @@ const fs = require("fs");
 
 const rs = fs.createReadStream("local/big-file.txt", {
     encoding: "utf-8",
+    highWaterMark: 65536 * 4,
 });
 
 /** @type {Object.<string, number>} */
@@ -17,8 +18,10 @@ const numBlockPerCharacter = {
 
 /** @type {string | undefined>} */
 let prevCharacter;
+let chunkCount = 0;
 
 rs.on("data", (data) => {
+    chunkCount += 1;
     if (typeof data !== "string") {
         return;
     }
@@ -40,4 +43,5 @@ rs.on("data", (data) => {
 rs.on("end", () => {
     log("Event: end");
     log("blockCount", numBlockPerCharacter);
+    log("chunkCount", chunkCount);
 });
