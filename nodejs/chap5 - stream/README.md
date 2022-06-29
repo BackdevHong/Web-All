@@ -34,3 +34,16 @@
 -   crypto streams ( 암호화 알고리즘 스트림 )
 
 ( 어떤 입력을 집어넣으면, 그 입력이 다른 형태로 바뀌어서 나온다. )
+
+# Toy Project - JSON 스트림 처리기
+
+줄바꿈으로 분리된 JSON들을 읽어서, 정상 JSON들에 한해 data 값을 모두 더해보자.
+
+## stream 처리시 유의점
+
+어디에서 chunk가 잘릴지 예측할 수 없다.
+이 점을 잘 유의하고 한번 짜보도록 하겠다.
+
+## pipeline
+
+pipeline은 transform stream을 쉽게 활용할 수 있게 도와준다.
