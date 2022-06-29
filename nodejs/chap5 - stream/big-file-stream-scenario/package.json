@@ -1,0 +1,21 @@
+{
+    "engines": {
+        "node": "^18.3.0"
+    },
+    "scripts": {
+        "lint": "eslint src/**/*"
+    },
+    "type": "commonjs",
+    "dependencies": {
+        "decamelize": "^6.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.0.0",
+        "eslint": "^8.18.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-node": "^4.1.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-node": "^11.1.0"
+    }
+}
